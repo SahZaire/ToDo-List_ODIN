@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sofia&display=swap');
+
+:root {
+    --image : url("../images/background.png");
+}
+
+* {
+    font-family: 'Josefin Sans';
+}
+
+body {
+    background-image: var(--image);
+    background-repeat: none;
+    background-size: cover;
+    margin: 0%;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin: 0%;
+}
+
+
+/* SIDEBAR ################# */
+
+.sidebar {
+    height: 100vh;
+    width: 25%;
+    background-color: #303E47;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: block;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 15px;
+    width: 80%;
+    height: 8vh;
+    background-color: #0F1420;
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 25px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.user h1 {
+    margin-left: 10px;
+    color: snow;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 87%;
+    height: 83vh;
+    overflow-y: auto;
+    background-color: #0F1420;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 25px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.project-list > * {
+    flex-shrink: 0;
+}
+.project-list::-webkit-scrollbar{
+    display: none;
+}
+
+.project-0 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 85%;
+    height: 8vh;
+    background-color: #1B3444;
+    margin-left: 25px;
+    margin-top: 15px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
+}
+
+.project-0 h3 {
+    margin-left: 10px;
+    color: snow;
+}
+
+.new-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 8vh;
+    background-color: #1B3444;
+    margin-left: 25px;
+    margin-top: 15px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: snow;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+
+
+
+/* CONTENT ################## */
+
+.content {
+    display: block;
+    background-color: #0F1420;
+    border-radius: 40px;
+    height: 90vh;
+    width: 65%;
+    margin: auto;
+}
+
+.project-name {
+    height: 8vh;
+    width: 90%;
+    display: flex;
+    background-color: #1B3444;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;   
+}
+
+.project-name h2 {
+    color: snow;
+}
+
+.todo-list {
+    /* background: #000; */
+    height: 73vh;
+    display: block;
+    position: sticky;
+}
+
+.todo-1 {
+    height: 8vh;
+    width: 90%;
+    display: flex;
+    background-color: #1B3444;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: start;  
+    font-size: 18px;
+    color: snow;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 30px;
+    margin-left: 15px;
+    position: relative;
+}
+input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 18px; 
+    height: 18px; 
+    border: 2px solid #ccc; 
+    border-radius: 50%; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-60%);   /* to vertically center the checkbox */
+}
+input[type="checkbox"]:checked + label::before {
+    background-color: #78ff7d; 
+}
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through; 
+}
+
+.new-todo {
+    height: 8vh;
+    width: 90%;
+    display: flex;
+    background-color: #1B3444;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: start;  
+    font-size: 18px;
+    color: snow;
+}
+.new-todo p {
+    margin-left: 18px;
+}
+
+
+
+
+
+
+/* JS IMPROVEMENTS ####################################### */
+
+#new-projectname {
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    color: snow;
+    font-weight: bold;
+    margin-left: 10px;
+    outline: none;
+}
